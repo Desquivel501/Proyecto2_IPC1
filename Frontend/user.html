@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <script src="js/scripts.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Inicio</a></li>
+                                <li><a href="./blog.html">Blog</a></li>
+                                <li onclick="check_if_logged()" class="active"> <a a href="#">Mi Perfil</a></li>
+                                <li><a href="./index.html">Nosotros</a></li>
+                                <li><a href="#">Contanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">     
+                        <nav class="header__menu mobile-menu">
+                            <ul style="margin-right:-80px;">  
+                                <li><a  style="margin-top:-30px; margin-right:-100px;" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown" style="margin-top:-40px; margin-left: -30px; width: 160px;">
+                                        <li onclick="mod_perfil()"><a href="#">Modificar Usuario</a></li>
+                                        <li onclick="cerrar_sesion()"><a href="#">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 300px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Modulo Paciente</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container" style="max-width: 98%">
+            <div class="tab" style="margin-left: 0px; margin-right: 0px; margin-top:-20px;" >
+                <button class="tablinks" onclick="openCity(event, 'Pacientes')" id="defaultOpen" >Solicitar Cita</button>
+                <button class="tablinks" onclick="openCity(event, 'Medicos')">Comprar</button>
+            </div>
+            
+
+            <div id="Pacientes" class="tabcontent" style="margin-left: 0px; margin-right: 0px;">
+                <div class="admin_container">
+                    <div class="admin_carga">
+                        <h3 style="margin-bottom:20px; margin-top:20px;">Solicitar Cita</h3>
+                        
+                        <div class="login__form">
+                            <form action="#">
+                                
+                                <label for="fecha" class="form-label" style="color:white;" >Fecha</label>
+                                <div class="input__item">
+                                    <input type="date" id="fecha" name="fecha">
+                                    <span class="icon_calendar"></span>
+                                </div>
+
+                                <label for="hora" class="form-label" style="color:white;">Hora</label>
+                                <div class="input__item">
+                                    <input id="hora" type="time">
+                                    <span class="fa fa-clock-o"></span>
+                                </div>
+                                
+                                <label for="name" class="form-label" style="color:white;">Motivo</label>
+                                <div class="input__item">
+                                    <textarea class="form-control" id="motivo" rows="5" style="padding-left: 76px; color:black;" placeholder="Escriba el motivo de la cita"></textarea>
+                                    <span class="fa fa-book"></span>
+                                </div>
+                                        
+                                <button onclick="crearCita()" type="button" class="site-btn" style="margin-bottom: 15px;">Solicitar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="admin_carga">
+                        <h3 style="margin-bottom:20px; margin-top:20px;">Estado Citas</h3>
+
+                        <div class="login__form" >
+                            <form action="#" id="detalles_cita"></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+            <div id="Medicos" class="tabcontent" style="margin-left: 0px; margin-right: 0px;">
+                <h3 style="text-align:center; margin-bottom:50px;">Lista de Medicamentos</h3>
+                
+                <div class="row">
+
+                <div class="col-lg-8" style="max-width: 50%">
+                    <div class="row" id="med_container">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8" style="max-width: 50%; flex: 0 0 50%;">
+                    <div class="product__sidebar">
+                        <div class="product__sidebar__view">
+                            <div class="section-title" >
+                                <h5>Pedidos</h5>
+                            </div>
+                            <table class="table table-bordered" id="tabla_pacientes" >
+                                <thead class="table-primary">
+                                  <tr >
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Agregar</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="table table-hover" id="tabla_med"></tbody>
+                              </table>
+                             <div>
+                                <input id="total" value ="Total:     " type="text" style="height: 50px; border-radius: 2px; margin-right:10px; font-size: 18px; font-weight: 700; letter-spacing: 2px; padding-left:10px;" readonly>
+                                <button onclick="back()" type="button" class="site-btn" style="margin-left:auto; margin-right:auto">Registrar Pedido</button>
+                                
+                             </div>
+                              
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a href="./categories.html">Categories</a></li>
+                            <li><a href="./blog.html">Our Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+      <!-- Footer Section End -->
+
+      <!-- Search model Begin -->
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    
+
+    <script>
+        
+
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+
+
+        function getmeds(){
+            var tabla = document.querySelector('#med_container');
+            var cadena = '';
+
+            fetch('http://127.0.0.1:3000/Med',{
+                method: 'GET',
+                })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response)
+                    
+                    for(var i in response){
+                        console.log(response[i].Nombre)
+                        cadena += `
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg">
+                                        <img src="img/med.jpg" style= "height: 150px;  margin-left: auto; margin-right: auto; display: block;"> 
+                                        <div class="view"><i class="fa fa-shopping-cart"></i> Q${response[i].Precio}</div>
+                                    </div>
+                                    <div class="product__item__text" style="text-align:center">
+                                        <h4 style="color:white; font-weight: bold;">${response[i].Nombre}</h4>
+                                        <h6 style="color:white; margin-bottom: 10px">${response[i].Descripcion}</h6>
+                                        <button type="button" value="${response[i].Nombre}" onClick="getmed(this)" class="site-btn" style="text-align:center; padding-top:3px; padding-bottom:3px">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+                    }
+                    tabla.innerHTML = cadena;
+                })
+        }
+
+        function getmed(boton) {
+            console.log(boton.value)
+            var med = boton.value;
+            console.log(med)
+            var tabla = document.querySelector('#detalles');
+            var cadena = '';
+            var nombre_usuario = localStorage.getItem("logged_user")
+
+            var objeto = {
+                'nombre':nombre_usuario,
+            }
+
+            fetch('http://127.0.0.1:3000/Med/'+ med +"/agregar",{
+                method: 'POST',
+                body: JSON.stringify(objeto),
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',}
+                })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response)
+                    getmed_table()
+                    
+                        
+                })
+        }
+
+        function getmed_table() {
+            
+            var tabla = document.querySelector('#tabla_med');
+            var cadena = '';
+            var nombre_usuario = localStorage.getItem("logged_user")
+            tabla.innerHTML = "";
+            var total = 0
+
+            fetch('http://127.0.0.1:3000/compras',{
+                method: 'GET' })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response.Mensaje)
+                    
+                    for(var i in response){
+                        cadena += `
+                            <tr class="table-light ">
+                                <td>${response[i].Nombre}</td>
+                                <td>Q${response[i].Precio}</td>
+                                <td>${response[i].Cantidad}</td> 
+                                <td> Q${response[i].Cantidad * response[i].Precio}</td> 
+                                <td>
+                                    <button type="button" value="${response[i].Nombre}" onClick="getmed(this)" class="btn btn-success"><i class="fa fa-plus-square"></i></button>
+                                    <button type="button" value="${response[i].Nombre}" onClick="quitarmed(this)" class="btn btn-danger"><i class="fa fa-minus-square"></i></button>
+                                </td>
+                            </tr>
+                        `
+                        total += (response[i].Cantidad * response[i].Precio);
+                    }
+                    document.getElementById('total').value = "Total: Q" + total;
+                    tabla.innerHTML += cadena;
+                })
+        }
+
+        function quitarmed(boton) {
+            console.log(boton.value)
+            var med = boton.value;
+            var tabla = document.querySelector('#detalles');
+            var cadena = '';
+            var nombre_usuario = localStorage.getItem("logged_user")
+
+            var objeto = {
+                'nombre':nombre_usuario,
+            }
+
+            fetch('http://127.0.0.1:3000/Med/'+ med +"/quitar",{
+                method: 'POST',
+                body: JSON.stringify(objeto),
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',}
+                })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response.Mensaje);
+                    getmed_table();    
+                })
+        }
+
+        function mod_perfil(){
+            var logged = localStorage.getItem("logged_user")
+            localStorage.setItem("user", logged)
+            location.href= "modificar_usuario.html"
+        }
+
+        function crearCita(){
+            var fecha = document.querySelector('#fecha').value
+            var hora = document.querySelector('#hora').value
+            var motivo = document.querySelector('#motivo').value
+            var nombre_usuario = localStorage.getItem("logged_user");
+
+            var objeto = {
+                'nombre':nombre_usuario,
+                'fecha': fecha,
+                'hora': hora,
+                'motivo':motivo
+            }
+            
+
+            fetch('http://127.0.0.1:3000/Cita',{
+                method: 'POST',
+                body: JSON.stringify(objeto),
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',}})
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    alert(response.Mensaje)
+                    location.reload();
+
+                })
+        }
+
+        function get_citas() {
+            var tabla = document.querySelector('#detalles_cita');
+            var cadena = '';
+
+            fetch('http://127.0.0.1:3000/citas/'+localStorage.getItem("logged_user"),{
+                method: 'GET',
+                })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response)
+                    
+                    if(response.Mensaje == "Existe"){
+                    
+                        cadena += `
+                            <label for="fecha" class="form-label" style="color:white;" >Fecha</label>
+                            <div class="input__item">
+                                <input type="date" id="fecha_estado" name="fecha"  value="${response.Fecha}"     readonly>
+                                <span class="icon_calendar"></span>
+                            </div>
+
+                            <label for="hora" class="form-label" style="color:white;">Hora</label>
+                            <div class="input__item">
+                                <input id="hora_estado" type="time" value="${response.Hora}" readonly>
+                                <span class="fa fa-clock-o"></span>
+                            </div>
+                            
+                            <label for="name" class="form-label" style="color:white;">Motivo</label>
+                            <div class="input__item">
+                                <textarea class="form-control" id="motivo_estado" rows="3" style="padding-left: 76px; color:black;" placeholder="Escriba el motivo de la cita"  readonly>${response.Motivo}</textarea>
+                                <span class="fa fa-book"></span>
+                            </div>
+                                    
+                            <label for="name" class="form-label" style="color:white;" >Estado</label>
+                            <div class="input__item">
+                                <input type="text" placeholder="Nombre" id="estado" value="${response.Estado}" readonly>
+                                <span class="fa fa-address-book"></span>
+                            </div>
+
+                            <label for="name" class="form-label" style="color:white;" >Doctor</label>
+                            <div class="input__item" style="margin-bottom:30px">
+                                <input type="text" placeholder="No ha sido seleccionado un doctor." id="doctor" value="${response.Doctor}" readonly>
+                                <span class="fa fa-address-book"></span>
+                            </div>
+                        `
+                        
+                    }else if(response.Mensaje == "No existe"){
+                        cadena += `
+                            <h5 style="color:white;margin-top:20px;">No se tiene una cita activa.</h5>
+                        `
+                    }
+
+                    tabla.innerHTML = cadena;
+                })
+        }
+
+
+
+        window.onload = getmeds();
+        window.onload =  get_citas();
+        window.onload = getmed_table();
+       
+
+    </script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/nicepage.css" type="text/css">
+    <link rel="stylesheet" href="css/Home.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <script src="js/scripts.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li ><a href="./index.html">Inicio</a></li>
+                                <li class="active"><a href="./blog.html">Blog</a></li>
+                                <li onclick="check_if_logged()" > <a a href="#">Mi Perfil</a></li>
+                                <li><a href="./index.html">Nosotros</a></li>
+                                <li><a href="#">Contactanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">     
+                        <nav class="header__menu mobile-menu">
+                            <ul style="margin-right:-80px;">  
+                                <li><a  style="margin-top:-30px; margin-right:-100px; font-size:25px" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown" style="margin-top:-40px; margin-left: -30px; width: 160px;">
+                                        <li onclick="mod_perfil()"><a href="#">Modificar Usuario</a></li>
+                                        <li onclick="cerrar_sesion()"><a href="#">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 350px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Nuestro Blog</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__title">
+                        <h6>Salud <span>- 30 de abril del 2021</span></h6>
+                        <h2>Medidas de Prevencion contra el COVID-19</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+                            <p>La enfermedad por coronavirus (COVID 19) es una ‎enfermedad infecciosa causada por un ‎coronavirus recientemente descubierto. ‎
+                                La mayoría de las personas que enferman de ‎COVID 19 experimentan síntomas de leves a ‎moderados y se recuperan sin tratamiento ‎especial. ‎</p>
+        
+                            <p>El virus que causa la COVID‑19 se transmite principalmente a través de las gotículas generadas cuando una persona infectada tose, 
+                                estornuda o espira. Estas gotículas son demasiado pesadas para permanecer suspendidas en el aire y caen rápidamente sobre el suelo o las superficies.
+                                Usted puede infectarse al inhalar el virus si está cerca de una persona con COVID‑19 o si, tras tocar una superficie contaminada, 
+                                se toca los ojos, la nariz o la boca.‎</p>
+
+                            <p>Algunas medidas de prevencion son:</p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h1 style="color:#ffffff">Use mascarilla</h1>
+                            <img src="img/blog/blog_2.png" alt="" style="display: block;margin-right: auto;margin-left: auto;min-width: 50%;">
+                            <p>Las mascarillas pueden ayudar a prevenir que las personas que las llevan propaguen el virus y lo contagien a otras personas. 
+                                Sin embargo, no protegen frente a la COVID-19 por sí solas, sino que deben combinarse con el distanciamiento físico y la higiene de manos. 
+                                Sigue las recomendaciones de los organismos de salud pública de tu zona.</p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h1 style="color:#ffffff">Distanciamiento Fisico</h1>
+                            <img src="img/blog/blog_3.png" alt="" style="display: block;margin-right: auto;margin-left: auto;min-width: 50%;">
+                            <p>El distanciamiento social, también llamado "distanciamiento físico", consiste en mantener una distancia segura entre usted y otras personas 
+                                que no pertenecen a su hogar.
+                            </p>
+                            &nbsp;
+                            <p> Para poner en práctica el distanciamiento físico o social, manténgase a una distancia de al menos 6 pies (la longitud aproximada de 2 brazos 
+                                extendidos) de las demás personas que no son miembros de su hogar, tanto en espacios interiores como al aire libre.</p>
+                               
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h1 style="color:#ffffff">Evite las grandes aglomeraciones</h1>
+                            <img src="img/blog/blog_5.png" alt="" style="display: block;margin-right: auto;margin-left: auto;min-width: 50%;">
+                            <p>Estar en espacios con aglomeraciones como restaurantes, bares, gimnasios o cines aumenta su riesgo de COVID-19. En lo posible, evite los espacios 
+                                cerrados donde no hay circulación de aire fresco del exterior. Si está en interiores, abra las puertas y ventanas para que ingrese aire fresco, si es posible.</p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h1 style="color:#ffffff">Lavarse las manos frecuentemente</h1>
+                            <img src="img/blog/blog_6.png" alt="" style="display: block;margin-right: auto;margin-left: auto;min-width: 50%;">
+                            <p>Lávese las manos con frecuencia con agua y jabón por al menos 20 segundos, especialmente después de haber estado en un lugar público, o 
+                                después de sonarse la nariz, toser o estornudar. </p>
+                                &nbsp;
+                            <p>Es de suma importancia que se lave: </p>
+                            <ul style="color: #ffffff">
+                                <li>Antes de comer o preparar la comida</li>
+                                <li>Antes de tocarse la cara</li>
+                                <li>Después de ir al baño</li>
+                                <li>Después de salir de lugares públicos</li>
+                                <li>Después de sonarse la nariz, toser o estornudar</li>
+                                <li>Después de manipular su mascarilla</li>
+                                <li>Después de cuidar a una persona enferma</li>
+                                <li>Después de tocar animales o mascotas</li>
+                              </ul>  
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h1 style="color:#ffffff">Limpie y desinfecte</h1>
+                            <img src="img/blog/blog_7.png" alt="" style="display: block;margin-right: auto;margin-left: auto;min-width: 50%;">
+                            <p>Limpie las superficies de alto contacto a diario. Esto incluye las mesas, las manijas de las puertas, los interruptores de luz, los mesones, 
+                                las barandas, los escritorios, los teléfonos, los teclados, los inodoros, los grifos, los lavamanos y los lavaplatos.</p>
+                                &nbsp;
+                            <p>
+                                En la mayoría de las situaciones, solamente limpiar elimina la mayoría de las partículas de virus de las superficies. 
+                                Es poco probable que sea necesario desinfectar en casa para reducir la transmisión del COVID-19, excepto que haya una 
+                                persona enferma o una persona con COVID-19 haya estado en su casa en las últimas 24 horas.
+                            </p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h1 style="color:#ffffff">Vacúnese</h1>
+                            <img src="img/blog/blog_4.png" alt="" style="display: block;margin-right: auto;margin-left: auto;min-width: 50%;">
+                            <p>Las vacunas autorizadas contra el COVID-19 pueden ayudar a protegerlo del COVID-19. Estas vacunas son seguras y efectivas. Luego de completar su
+                                 vacunación, puede reanudar algunas de las actividades que dejó  de hacer por la pandemia</p>
+                            
+                        </div>
+         
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>  
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a href="./categories.html">Categories</a></li>
+                            <li><a href="./blog.html">Our Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+      <!-- Footer Section End -->
+
+      <!-- Search model Begin -->
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

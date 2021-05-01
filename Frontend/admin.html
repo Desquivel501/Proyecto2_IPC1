@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <script src="js/scripts.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Inicio</a></li>
+                                <li><a href="./blog.html">Blog</a></li>
+                                <li onclick="check_if_logged()" class="active"> <a a href="#">Mi Perfil</a></li>
+                                <li><a href="./index.html">Nosotros</a></li>
+                                <li><a href="#">Contactanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">     
+                        <nav class="header__menu mobile-menu">
+                            <ul style="margin-right:-80px;">  
+                                <li><a  style="margin-top:-30px; margin-right:-100px; font-size:25px" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown" style="margin-top:-40px; margin-left: -30px; width: 160px;">
+                                        <li onclick="mod_perfil()"><a href="#">Modificar Usuario</a></li>
+                                        <li onclick="cerrar_sesion()"><a href="#">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 300px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Administrador</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pacientes')" id="defaultOpen" >Pacientes</button>
+                <button class="tablinks" onclick="openCity(event, 'Medicos')">Medicos</button>
+                <button class="tablinks" onclick="openCity(event, 'Enfermeras')">Enfermeras</button>
+                <button class="tablinks" onclick="openCity(event, 'Medicamentos')">Medicamentos</button>
+            </div>
+              
+            <div id="Pacientes" class="tabcontent">
+                <div class="admin_container">
+                    <div class="admin_carga">
+                        <h3>Lista de Pacientes</h3>
+                        <a href="./lista-pacientes.html" class="admin_vis_btn">Visualizar</a>
+                    </div>
+                    <div class="admin_visualizar">
+                        <div class="half-containers">
+                            <h3>Carga Masiva</h3>
+                            <input type="file" class="file-input" id="inputPac" value="Archivo" required> 
+                        </div>
+                        <div class="half-containers">
+                            <h5 id="file_name_pac" style="color:white" class="hidden"></h5>
+                            <button type="button" class="admin-btn" style="margin-top: 30px;" onClick=" cargaPac()">Cargar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+            <div id="Medicos" class="tabcontent">
+                <div class="admin_container">
+                    <div class="admin_carga">
+                        <h3>Lista de Medicos</h3>
+                        <a href="./lista-doctores.html" class="admin_vis_btn">Visualizar</a>
+                    </div>
+                    <div class="admin_visualizar">
+                        <div class="half-containers">
+                            <h3>Carga Masiva</h3>
+                            <input type="file" class="file-input" id="inputDoc" value="Archivo" required> 
+                        </div>
+                        <div class="half-containers">
+                            <h5 id="file_name_med" style="color:white" class="hidden"></h5>
+                            <button type="button" class="admin-btn" style="margin-top: 30px;" onClick="cargaDoc()">Cargar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+            <div id="Enfermeras" class="tabcontent">
+                <div class="admin_container">
+                    <div class="admin_carga">
+                        <h3>Lista de Enfermeras</h3>
+                        <a href="./lista-enfermeras.html" class="admin_vis_btn">Visualizar</a>
+                    </div>
+                    <div class="admin_visualizar">
+                        <div class="half-containers">
+                            <h3>Carga Masiva</h3>
+                            <input type="file" class="file-input" id="inputEnf" value="Archivo" required> 
+                        </div>
+                        <div class="half-containers">
+                            <h5 id="file_name_enf" style="color:white" class="hidden"></h5>
+                            <button type="button" class="admin-btn" style="margin-top: 30px;" onClick="cargaEnf()">Cargar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="Medicamentos" class="tabcontent" style="text-align: center">
+
+                <div class="admin_container">
+                    <div class="admin_carga">
+                        <h3>Lista de Medicamentos</h3>
+                        <a href="./lista-med.html" class="admin_vis_btn">Visualizar</a>
+                    </div>
+                    <div class="admin_visualizar">
+                        <div class="half-containers">
+                            <h3>Carga Masiva</h3>
+                            <input type="file" class="file-input" id="inputMed" value="Archivo" required> 
+
+                        </div>
+                        <div class="half-containers">
+                            <h5 id="file_name_medi" style="color:white" class="hidden"></h5>
+                            <button type="button" class="admin-btn" style="margin-top: 30px;" onClick="cargaMed()">Cargar</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a href="./categories.html">Categories</a></li>
+                            <li><a href="./blog.html">Our Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+      <!-- Footer Section End -->
+
+      <!-- Search model Begin -->
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+
+
+        function showFilePac(){
+            document.getElementById("file_name_pac").className = '';
+            document.getElementById('file_name_pac').innerHTML = 'Archivo: ';
+        }
+        function showFileMed(){
+            document.getElementById("file_name_med").className = '';
+            document.getElementById('file_name_med').innerHTML = 'Archivo: ';
+        }
+        function showFileEnf(){
+            document.getElementById("file_name_enf").className = '';
+            document.getElementById('file_name_enf').innerHTML = 'Archivo: ';
+        }
+        function showFileMedi(){
+            document.getElementById("file_name_medi").className = '';
+            document.getElementById('file_name_medi').innerHTML = 'Archivo: ';
+        }
+
+
+
+        function cargaPac(){
+            let archivo = document.getElementById('inputPac').files[0];
+ 
+            const reader = new FileReader();
+            reader.addEventListener("load", (event) => {
+                pacientes(event.target.result);
+            });
+          
+            reader.readAsText(archivo, "UTF-8");
+            
+        }
+
+        function cargaDoc(){
+            let archivo = document.getElementById('inputDoc').files[0];
+ 
+            const reader = new FileReader();
+            reader.addEventListener("load", (event) => {
+                doctores(event.target.result);
+            });
+          
+            reader.readAsText(archivo, "UTF-8");
+            
+        }
+
+        function cargaEnf(){
+            let archivo = document.getElementById('inputEnf').files[0];
+ 
+            const reader = new FileReader();
+            reader.addEventListener("load", (event) => {
+                enfermeras(event.target.result);
+            });
+          
+            reader.readAsText(archivo, "UTF-8");
+            
+        }
+
+        function cargaMed(){
+            let archivo = document.getElementById('inputMed').files[0];
+ 
+            const reader = new FileReader();
+            reader.addEventListener("load", (event) => {
+                medicamentos(event.target.result);
+            });
+          
+            reader.readAsText(archivo, "UTF-8");
+            
+        }
+
+        function pacientes(texto){
+
+            texto = texto.split('\n')
+            let usuarios_array = [];
+
+            texto.forEach(linea =>{
+                if(linea != ""){
+
+                    let usuario_aux = linea.split(',')
+
+                    let usuario = {
+                        Nombre: usuario_aux[0],
+                        Apellido: usuario_aux[1],
+                        Fecha: usuario_aux[2],
+                        Sexo: usuario_aux[3],
+                        User_name: usuario_aux[4],
+                        Password: usuario_aux[5],
+                        Telefono: usuario_aux[6]
+                    };
+
+                    usuarios_array.push(usuario);
+
+                }
+              
+            })
+            console.log(usuarios_array)
+
+            let usuarios ={
+                usuarios: usuarios_array,
+            };
+
+            fetch('http://127.0.0.1:3000/carga_pacientes', {
+                method: "POST",
+                body: JSON.stringify(usuarios),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((res) => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error" + err)
+                })
+                .then(response =>{
+                    alert("Se han cargado los pacientes.")
+                })
+
+        }
+
+        function doctores(texto){
+
+            texto = texto.split('\n')
+            let doc_array = [];
+
+            texto.forEach(linea =>{
+                if(linea != ""){
+
+                    let doc_aux = linea.split(',')
+
+                    let usuario = {
+                        Nombre: doc_aux[0],
+                        Apellido: doc_aux[1],
+                        Fecha: doc_aux[2],
+                        Sexo: doc_aux[3],
+                        User_name: doc_aux[4],
+                        Password: doc_aux[5],
+                        Telefono: doc_aux[6],
+                        Especialidad: doc_aux[7]
+                    };
+
+                    doc_array.push(usuario);
+
+                }
+              
+            })
+            console.log(doc_array)
+
+            let doc ={
+                doctores: doc_array,
+            };
+
+            fetch('http://127.0.0.1:3000/carga_doctores', {
+                method: "POST",
+                body: JSON.stringify(doc),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((res) => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error" + err)
+                })
+                .then(response =>{
+                    alert("Se han cargado los doctores.")
+                })
+
+        }
+
+        function enfermeras(texto){
+
+            texto = texto.split('\n')
+            let enfermeras_array = [];
+
+            texto.forEach(linea =>{
+                if(linea != ""){
+
+                    let enfermera_aux = linea.split(',')
+
+                    let enfermera = {
+                        Nombre: enfermera_aux[0],
+                        Apellido: enfermera_aux[1],
+                        Fecha: enfermera_aux[2],
+                        Sexo: enfermera_aux[3],
+                        User_name: enfermera_aux[4],
+                        Password: enfermera_aux[5],
+                        Telefono: enfermera_aux[6]
+                    };
+
+                    enfermeras_array.push(enfermera);
+
+                }
+              
+            })
+            console.log(enfermeras_array)
+
+            let enfermeras ={
+                enfermeras: enfermeras_array,
+            };
+
+            fetch('http://127.0.0.1:3000/carga_enfermeras', {
+                method: "POST",
+                body: JSON.stringify(enfermeras),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((res) => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error" + err)
+                })
+                .then(response =>{
+                    alert("Se han cargado las enfermeras")
+                })
+
+        }
+
+        function medicamentos(texto){
+
+            texto = texto.split('\n')
+            let medicamentos_array = [];
+
+            texto.forEach(linea =>{
+                if(linea != ""){
+
+                    let med_aux = linea.split(',')
+
+                    let medicamento = {
+                        Nombre: med_aux[0],
+                        Precio: med_aux[1],
+                        Descripcion: med_aux[2],
+                        Cantidad: med_aux[3]
+                    };
+
+                    medicamentos_array.push(medicamento);
+
+                }
+              
+            })
+            console.log(medicamentos_array)
+
+            let medicamentos ={
+                medicamentos: medicamentos_array,
+            };
+
+            fetch('http://127.0.0.1:3000/carga_medicamentos', {
+                method: "POST",
+                body: JSON.stringify(medicamentos),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((res) => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error" + err)
+                })
+                .then(response =>{
+                    alert("Se han cargado los medicamentos.")
+                })
+
+        }
+
+
+    </script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

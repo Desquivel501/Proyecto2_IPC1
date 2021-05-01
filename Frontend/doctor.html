@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Inicio</a></li>
+                                <li><a href="./blog.html">Blog</a></li>
+                                <li onclick="check_if_logged()" class="active"> <a a href="#">Mi Perfil</a></li>
+                                <li><a href="./index.html">Nosotros</a></li>
+                                <li><a href="#">Contactanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">     
+                        <nav class="header__menu mobile-menu">
+                            <ul style="margin-right:-80px;">  
+                                <li><a  style="margin-top:-30px; margin-right:-100px; font-size:25px" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown" style="margin-top:-40px; margin-left: -30px; width: 160px;">
+                                        <li onclick="mod_perfil()"><a href="#">Modificar Usuario</a></li>
+                                        <li onclick="cerrar_sesion()"><a href="#">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    
+    <!-- Header End -->
+
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 300px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Modulo Doctor</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container" style="max-width: 90%">
+            <div class="tab" style="margin-left: 0px; margin-right: 0px;">
+                <button class="tablinks" onclick="openCity(event, 'Recetas')" id="defaultOpen" >Recetas</button>
+                <button class="tablinks" onclick="openCity(event, 'Aceptar')">Aceptar Citas</button>
+                <button class="tablinks" onclick="openCity(event, 'citas')">Mis Citas</button>
+            </div>
+
+            <div id="Recetas" class="tabcontent" style="margin-left: 0px; margin-right: 0px;">
+                <h3 style="text-align:center; margin-top: 30px; margin-bottom:30px; font-size:35px">GENERAR RECETA</h3>
+                <div class="login__form">
+                    <form >
+                        <label for="fecha" class="form-label" style="color:white;" >Fecha</label>
+                        <div class="input__item">
+                            <input type="date" id="fecha" name="birthday" >
+                            <span class="icon_calendar"></span>
+                        </div>
+                        <label for="paciente" class="form-label" style="color:white;" >Nombre Paciente</label>
+                        <div class="input__item">
+                            <input type="text" placeholder="Nombre" id="paciente" >
+                            <span class="fa fa-user"></span>
+                        </div>
+
+                        <label for="padecimiento" class="form-label" style="color:white; margin-top:10px; border-top-color: white;" >Padecimiento</label>
+                        <div class="input__item">
+                            <input type="text" placeholder="Precio" id="padecimiento" value=0 onkeyup="suma_factura()">
+                            <span class="fa fa-medkit" ></span>
+                        </div>
+
+                        <label for="descripcion" class="form-label" style="color:white;" >Descripcion</label>
+                        <div class="input__item">
+                            <textarea class="form-control" id="descripcion" rows="5" style="padding-left: 76px; color:black;" placeholder="Escriba el motivo de la cita"></textarea>
+                            <span class="fa fa-book"></span>
+                        </div>
+                        
+                        
+                        <button onclick="guardarFactura()" type="button" class="site-btn" style="margin-bottom:30px;">Generar Receta</button>
+                        
+                    </form>
+                </div>
+            </div>
+              
+            <div id="Aceptar" class="tabcontent" style="margin-left: 0px; margin-right: 0px;">
+                <h3 style="text-align:center; margin-top: 30px; margin-bottom:30px; font-size:35px">LISTA DE CITAS PENDIENTES</h3>
+                <table class="table table-bordered" id="tabla_pacientes">
+                    <thead class="table-primary">
+                      <tr >
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Motivo</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Opciones</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table table-hover" id="detalles"></tbody>
+                  </table>
+                  
+            </div>
+              
+            <div id="citas" class="tabcontent" style="margin-left: 0px; margin-right: 0px;">
+                <h3 style="text-align:center; margin-top: 30px; margin-bottom:30px; font-size:35px">LISTA DE CITAS ACEPTADAS</h3>
+                <table class="table table-bordered" id="tabla_pacientes">
+                    <thead class="table-primary">
+                      <tr >
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Motivo</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Doctor</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table table-hover" id="tabla_aceptadas"></tbody>
+                  </table>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a href="./categories.html">Categories</a></li>
+                            <li><a href="./blog.html">Our Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+      <!-- Footer Section End -->
+
+      <!-- Search model Begin -->
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scripts.js"></script>
+    
+
+    <script>
+        
+
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+
+    
+
+
+
+        function get_citas() {
+            var doctor = localStorage.getItem("logged_user")
+            var tabla = document.querySelector('#tabla_aceptadas');
+            var cadena = '';
+            tabla.innerHTML = "";
+
+            fetch('http://127.0.0.1:3000/citas/doctor/'+doctor,{
+                method: 'GET' })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    
+                    for(var i in response){
+                        cadena += `
+                            <tr class="table-light ">
+                                <td>${response[i].Fecha}</td>
+                                <td>${response[i].Hora}</td>
+                                <td>${response[i].Motivo}</td> 
+                                <td> ${response[i].Paciente} </td> 
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="${response[i].Id}" id="check" onchange="completarCita(this)">
+                                </td>
+                            </tr>
+                        `
+                    }
+                    tabla.innerHTML += cadena;
+                })
+        }
+        function get_citas_pendientes() {
+            
+            var tabla = document.querySelector('#detalles');
+            var cadena = '';
+            tabla.innerHTML = "";
+
+            fetch('http://127.0.0.1:3000/citas_pendientes',{
+                method: 'GET' })
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    
+                    for(var i in response){
+                        cadena += `
+                            <tr class="table-light ">
+                                <td>${response[i].Fecha}</td>
+                                <td>${response[i].Hora}</td>
+                                <td>${response[i].Motivo}</td> 
+                                <td> ${response[i].Paciente} </td> 
+                                <td>
+                                    <button type="button" value="${response[i].Id}" class="btn btn-success" onClick="aceptarCita()" style="margin-right:8px;" data-toggle="modal" data-target="#asignar_doctor" ><i>Aceptar</i></button>
+                                    <button type="button" value="${response[i].Id}" class="btn btn-danger" onClick="rechazarCita(this)" ><i>Rechazar</i></button>
+                                </td>
+                            </tr>
+                        `
+                    }
+                    tabla.innerHTML += cadena;
+                })
+        }
+
+        function aceptarCita(){
+            var doc = localStorage.getItem("logged_user")
+            var cita_id = localStorage.getItem("cita")
+
+            var objeto = {
+                'doctor':doc,
+                'id_cita': cita_id
+            }
+
+    
+            fetch('http://127.0.0.1:3000/citas/' + cita_id + '/aceptar',{
+                method: 'POST',
+                body: JSON.stringify(objeto),
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',}})
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response.Mensaje)
+                    location.reload(); 
+                })
+        }
+
+        function rechazarCita(buton){
+            var cita_id = buton.value
+            var objeto = {
+                'id_cita': cita_id
+            }
+
+            var r = confirm("¿Esta seguro que desea rechazar esta cita?");
+            if (r == true) {
+                
+                fetch('http://127.0.0.1:3000/citas/' + cita_id + '/rechazar',{
+                    method: 'POST',
+                    body: JSON.stringify(objeto),
+                    headers:{
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',}})
+                    .then(res => res.json())
+                    .catch(err =>{
+                        console.log("Ha ocurrido un error");
+                        alert("Ha ocurrido un error")
+                    })
+                    .then(response =>{
+                        console.log(response.Mensaje)
+                        location.reload(); 
+                    })
+            }
+        }
+
+        function completarCita(check){
+            var cita_id = check.value
+            console.log("here")
+
+            var objeto = {
+                'id_cita': cita_id
+            }
+       
+            fetch('http://127.0.0.1:3000/citas/' + cita_id + '/completar',{
+                method: 'POST',
+                body: JSON.stringify(objeto),
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',}})
+                .then(res => res.json())
+                .catch(err =>{
+                    console.log("Ha ocurrido un error");
+                    alert("Ha ocurrido un error")
+                })
+                .then(response =>{
+                    console.log(response.Mensaje)
+                    alert("Se ha completado la cita")
+                    document.getElementById("check").disabled = true;
+                })
+        }
+        
+        window.onload = get_citas_pendientes();
+        window.onload = get_citas();
+
+    </script>
+
+</body>
+
+</html>

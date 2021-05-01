@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/nicepage.css" type="text/css">
+    <link rel="stylesheet" href="css/Home.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <script src="js/scripts.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li ><a href="./index.html">Inicio</a></li>
+                                <li ><a href="./blog.html">Blog</a></li>
+                                <li onclick="check_if_logged()" > <a a href="#">Mi Perfil</a></li>
+                                <li class="active"><a href="./Nosotros.html">Nosotros</a></li>
+                                <li><a href="./Contactenos.html">Contactanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">     
+                        <nav class="header__menu mobile-menu">
+                            <ul style="margin-right:-80px;">  
+                                <li><a  style="margin-top:-30px; margin-right:-100px; font-size:25px" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown" style="margin-top:-40px; margin-left: -30px; width: 160px;">
+                                        <li onclick="mod_perfil()"><a href="#">Modificar Usuario</a></li>
+                                        <li onclick="cerrar_sesion()"><a href="#">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 300px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Nosotros</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="u-align-center u-clearfix u-section-2" id="sec-a69c" style="margin-bottom: -40px;">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <h1 class="u-text u-text-1">Mision</h1>
+          <p class="u-text u-text-2">Somos una Institución de salud responsable de brindar atención integral de salud, 
+              con calidez y calidad, mediante la promoción de la salud, prevención de enfermedades, recuperación y rehabilitación de usuarias y usuarios, 
+              contando con recurso humano calificado y tecnología moderna para el mejoramiento de la calidad de vida, contribuyendo al desarrollo de la ciencia médica en Guatemala .</p>
+        </div>
+      </section>
+      
+      <hr class="new4" style="margin-top:30px">
+
+      <section class="u-align-center u-clearfix u-section-3" id="carousel_731e" style="margin-bottom: -40px;">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <h1 class="u-text u-text-1">Vision</h1>
+          <p class="u-text u-text-2">Ser el hospital líder a nivel nacional, comprometido a brindar atención especializada e integral de servicios de salud, mediante un 
+              sistema certificado de gestión de calidad apoyado con personal calificado, tecnología moderna y pertinente, orientada a satisfacer las necesidades y expectativas 
+              de usuarias y usuarios.</p>
+        </div>
+      </section>
+
+    
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>  
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a href="./categories.html">Categories</a></li>
+                            <li><a href="./blog.html">Our Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+      <!-- Footer Section End -->
+
+      <!-- Search model Begin -->
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
