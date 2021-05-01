@@ -52,7 +52,7 @@ def rolSwitch(i):
 
 @app.route("/", methods=["GET"])
 def index():
-    return str(x)
+    return render_template('index.html')
 
 @app.route("/", methods=["POST"])
 def indexPost():
