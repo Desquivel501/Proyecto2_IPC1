@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, redirect
+from flask import Flask, jsonify, request, redirect, render_template
 from flask_cors import CORS
 import datetime
 from Usuario import Usuario, Doctor, Enfermera, Admin
@@ -52,7 +52,7 @@ def rolSwitch(i):
 
 @app.route("/", methods=["GET"])
 def index():
-    return render_template('index.html')
+    return render_template('Frontend/index.html')
 
 @app.route("/", methods=["POST"])
 def indexPost():
