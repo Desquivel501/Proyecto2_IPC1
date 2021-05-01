@@ -50,13 +50,10 @@ def rolSwitch(i):
     }
     return switcher.get(i)
 
-@app.route("/", methods=["GET"])
+@app.route("/")
 def index():
     return render_template('index.html')
 
-@app.route("/", methods=["POST"])
-def indexPost():
-    return "Mensaje desde POST"
 
 @app.route("/hello")
 def hello_page():
